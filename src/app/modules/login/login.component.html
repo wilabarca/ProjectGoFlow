@@ -1,0 +1,27 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <img src="logo.png" class="logo" alt="Logo">
+    <h1 class="title">Go Flow</h1>
+    <h2 class="title-10">Iniciar Sesión</h2>
+
+    <div class="form-group">
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" formControlName="username" />
+      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        <small class="error">El usuario es requerido.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" formControlName="password" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small class="error">La contraseña es requerida.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+    <a class="tap">Crear Cuenta</a>
+    <p class="pa-1">Organiza tu dia, alcanza tu meta</p>
+  </form>
+</div>

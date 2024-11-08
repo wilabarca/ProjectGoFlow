@@ -1,0 +1,24 @@
+<app-header></app-header>
+<form [formGroup]="skillsForm" class="form-skillscollaborator" (ngSubmit)="onSubmit()">
+  <h2 class="form-title">Registro de Habilidades</h2>
+  <div>
+    <label for="materia">Materia:</label>
+    <select id="materia" formControlName="materia">
+      <option value="" disabled selected>Selecciona una materia</option> <!-- Opción predeterminada -->
+      <option value="matematica">Matematica Pura</option>
+      <option value="programacion">Programación</option>
+      <option value="ingles">Inglés</option>
+    </select>
+  </div>
+  <div>
+    <label for="experiencia">Experiencia En:</label>
+    <input type="text" id="experiencia" formControlName="experiencia">
+  </div>
+  <div>
+    <label for="informacion">Información En:</label>
+    <input type="text" id="informacion" formControlName="informacion">
+  </div>
+  <button type="submit" class="btn-skillscollaborator">Guardar</button>
+</form>
+
+ <app-footer></app-footer>

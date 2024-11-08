@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="chat-container">
+  <button class="logout-button" (click)="logout()">Salir del Chat</button>
+  <h2 class="chat-title">Chat de {{ userName }}</h2>
+  <div class="messages">
+    <div *ngFor="let msg of messages" class="message">
+      <strong>{{ msg.user }}:</strong> {{ msg.text }}
+    </div>
+  </div>
+  <form [formGroup]="chatForm" (ngSubmit)="sendMessage()" class="chat-form">
+    <input type="text" formControlName="message" placeholder="Escribe un mensaje..." required />
+    <button type="submit">Enviar</button>
+  </form>
+</div>

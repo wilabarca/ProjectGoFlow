@@ -1,0 +1,68 @@
+<header class="conteiner-19">
+  <div class="logotipo-container">
+    <img src="logo.png" alt="Logo de GoFlow" class="logotipo">
+    <h1 class="logo-text">GoFlow</h1>
+  </div>
+  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen ? 'true' : 'false'">☰</button>
+  <div class="nav" [class.active]="isMenuOpen"> 
+    <a href="#how-it-works">Cómo Funciona</a>
+    <a href="#testimonios">Testimonios</a>
+  </div>
+  <button type="submit" class="btn-19">Obtener Gratis</button>
+</header>
+<section class="hero">
+   <div class="hero-content">
+            <h2 class="paragraph">Organiza tu día, alcanza tu meta</h2>
+            <p class="text-12">GOFLOW te ayuda a gestionar tus tareas y maximizar tu productividad. ¡Empieza hoy mismo!</p>
+            <a href="#register" class="cta-button" routerLink="/login">Únete Gratis</a>
+    </div>
+        <div class="hero-image">
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325_1280.jpg" alt="Imagen inspiradora de GOFLOW" class="img-3">
+        </div>
+</section>
+<section id="features" class="features">
+  <h3>Características</h3>
+  <div class="feature-cards">
+      <div class="feature-card">
+          <h4 class="feature-title">Planificación Inteligente</h4>
+          <p class="feature-description">Organiza tus tareas de forma eficiente para cumplir tus objetivos. Nuestra aplicación te ayuda a establecer prioridades y plazos, asegurando que nunca te quedes atrás en tus proyectos importantes.</p>
+      </div>
+      <div class="feature-card">
+          <h4 class="feature-title">Recordatorios Personalizados</h4>
+          <p class="feature-description">Recibe recordatorios en el momento perfecto para no olvidar nada importante. Puedes configurar alertas personalizadas que se ajustan a tu estilo de vida y necesidades diarias.</p>
+      </div>
+      <div class="feature-card">
+          <h4 class="feature-title">Estadísticas y Progreso</h4>
+          <p class="feature-description">Consulta tu progreso y mejora día a día. Obtén informes detallados sobre tus actividades, lo que te permite ver qué áreas necesitas mejorar y cuáles son tus logros más significativos.</p>
+      </div>
+  </div>
+</section>
+
+<div class="lista-de-perfiles">
+  <h1 class="testimonio">Experencias</h1>
+  <app-profile
+    imageUrl="https://cdn.pixabay.com/photo/2022/09/02/20/03/man-7428290_1280.jpg"
+    name="Carlos López"
+    testimonial="Este sistema de administración de tareas me ha permitido organizar mis proyectos de manera eficiente. ¡Altamente recomendado!"
+  ></app-profile>
+
+  <app-profile
+    imageUrl="https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg"
+    name="María García"
+    testimonial="La facilidad para priorizar y asignar tareas ha mejorado mi productividad. ¡Una herramienta fantástica para cualquier equipo!"
+  ></app-profile>
+
+  <app-profile
+    imageUrl="https://cdn.pixabay.com/photo/2022/12/24/21/14/portrait-7676482_1280.jpg"
+    name="Pedro Hernández"
+    testimonial="Gracias a esta plataforma de administración, mis equipos trabajan de manera más coordinada y organizada. ¡Excelente servicio!"
+  ></app-profile>
+  <app-profile
+    imageUrl="https://cdn.pixabay.com/photo/2020/09/29/13/27/woman-5612838_960_720.jpg"
+    name="María López"
+    testimonial="Desde que comenzamos a usar esta herramienta, hemos optimizado nuestros procesos y mejorado la colaboración. ¡Totalmente recomendado!"
+></app-profile>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

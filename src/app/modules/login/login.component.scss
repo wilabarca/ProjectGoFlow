@@ -1,0 +1,142 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Color de fondo */
+  padding: 20px;
+}
+
+form {
+  background-color: white;
+  padding: 30px; /* Mayor espaciado para mejorar la apariencia */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+  width: 100%;
+  max-width: 320px; /* Ancho máximo más estrecho */
+  margin: auto; /* Centrar el formulario */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.title-10 {
+  font-size: 145%; /* Tamaño de fuente ajustado */
+  text-align: center; /* Centrar el título */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+.logo {
+  position: absolute;
+  margin-top: 1%;
+  left: 42%;
+  max-width: 88px; /* Asegúrate de que el logo no sea demasiado grande */
+  margin-bottom: 20px; /* Espaciado debajo del logo */
+  transition: transform 0.3s; /* Transición para el logo */
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.title {
+  margin-top: 4%;
+  margin-left: 9%;
+  font-size: 30px;
+  font-size: bold;
+  margin-bottom: 10px; /* Espaciado debajo del título */
+  color: #333; /* Color del título */
+  text-align: center; /* Centrando el título */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Mayor espaciado entre grupos de formularios */
+  display: flex;
+  flex-direction: column; /* Coloca las etiquetas y los inputs en columna */
+  align-items: center; /* Centrar elementos dentro del grupo */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Fuente más negrita */
+  color: #555; /* Color de la etiqueta */
+  text-align: center; /* Centrar etiqueta */
+}
+
+input {
+  width: 90%; /* Ancho del input ajustado */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transición en el borde y sombra */
+
+  &:focus {
+    border-color: #007bff; /* Color del borde en foco */
+    outline: none; /* Quita el contorno predeterminado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Color del botón */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer;
+  font-size: 16px; /* Tamaño de fuente del botón */
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+
+  &:hover {
+    background-color: #0056b3; /* Color del botón en hover */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  }
+
+  &:disabled {
+    background-color: #ccc; /* Color del botón deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
+  }
+}
+
+.tap {
+  text-align: center;
+  display: block; /* Hacer el enlace un bloque */
+  margin-top: 15px; /* Espaciado superior */
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s; /* Transición suave */
+
+  &:hover {
+    color: #0056b3; /* Color del enlace en hover */
+    text-decoration: underline; /* Subrayar en hover */
+  }
+}
+
+.pa-1 {
+  text-align: center; /* Centrar el texto */
+  margin-top: 10px; /* Espaciado superior */
+  color: #777; /* Color más claro para el texto */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+  form {
+    padding: 15px; /* Menos espaciado en pantallas pequeñas */
+    width: 90%; /* Ancho máximo más estrecho */
+  }
+
+  .title {
+    font-size: 20px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  button {
+    font-size: 14px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+}
