@@ -6,6 +6,11 @@ import { MathviewComponent } from './modules/mathview/mathview.component';
 import { LandingpageComponent} from './modules/landingpage/landingpage.component';
 import { SkillscollaboratorComponent } from './modules/skillscollaborator/skillscollaborator.component';
 import { ChatComponent } from './modules/chats/chats.component';
+import { AdministratorDeleteContributorComponent } from './modules/administrator/administrator-delete-contributor/administrator-delete-contributor.component';
+import { AdministrativeAssignmentDeletionComponent } from './modules/administrator/administrative-assignment-deletion/administrative-assignment-deletion.component';
+
+
+
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
   { path: 'userview', component: UserViewComponent},
@@ -14,6 +19,8 @@ export const routes: Routes = [
   {path:'mathview', component:MathviewComponent},
   {path:'landingpage', component:LandingpageComponent},
   {path:'skillscollaborator', component:SkillscollaboratorComponent},
-  { path: 'chats', component: ChatComponent } // Asegúrate de que sea 'chats' en minúsculas
+  { path: 'chats', component: ChatComponent } ,
+  { path: 'AdministratorDeleteContributor',  component: AdministratorDeleteContributorComponent},
+  {path: 'AdministrativeAssignmentDeletion', component:AdministrativeAssignmentDeletionComponent }
 
 ];

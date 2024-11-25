@@ -1,0 +1,20 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h4>Chat Go Flow</h4>
+  </div>
+  <main class="chat-history">
+    <ng-container *ngFor="let item of chatHistory">
+      <div class="message-container">
+        <i class="fa" [ngClass]="{'fa-user-circle': item.from === 'user', 'fa-robot': item.from === 'bot'}"></i>
+        <span>{{ item.message }}</span>
+      </div>
+    </ng-container>
+    <div *ngIf="loading" class="loading-indicator">
+      <i class="fa fa-spinner fa-spin"></i> Generando respuesta...
+    </div>
+  </main>
+  <div class="chat-input">
+    <input type="text" id="message-input" placeholder="Ingrese mensaje" [(ngModel)]="prompt" />
+    <button id="send-button" (click)="sendData()">Ingresar</button>
+  </div>
+</div>

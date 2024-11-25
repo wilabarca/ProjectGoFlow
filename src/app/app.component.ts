@@ -8,7 +8,7 @@ import { CardComponent } from './components/card/card.component';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, CardComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'] 
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'GoFlow';

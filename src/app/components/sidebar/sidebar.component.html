@@ -1,0 +1,20 @@
+<div class="hamburger-menu" (click)="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<div class="sidebar" [class.show]="isSidebarVisible">
+  <ul class="sidebar-menu">
+    <li>
+      <span>Eliminar Usuario</span>
+      <i class="fas fa-user-slash"></i>
+    </li>
+    <li>
+      <span>Eliminar Colaborador</span>
+      <i class="fas fa-user-friends"></i>
+    </li>
+    <li>
+      <span>Eliminar Asignación</span>
+      <i class="fas fa-tasks"></i>
+    </li>
+  </ul>
+</div>
