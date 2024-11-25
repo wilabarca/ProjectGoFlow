@@ -6,9 +6,10 @@ import { MathviewComponent } from './modules/mathview/mathview.component';
 import { LandingpageComponent} from './modules/landingpage/landingpage.component';
 import { SkillscollaboratorComponent } from './modules/skillscollaborator/skillscollaborator.component';
 import { ChatComponent } from './modules/chats/chats.component';
+
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
-  { path: 'userview', component: UserViewComponent},
+  { path: 'userview', component: UserViewComponent},//falta
   { path: 'login', component: LoginComponent},
   {path:'administratorview', component: AdministratorviewComponent},
   {path:'mathview', component:MathviewComponent},
