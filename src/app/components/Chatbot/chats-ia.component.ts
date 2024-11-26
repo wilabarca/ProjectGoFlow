@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { ChatsIAService } from './../../services/chats-ia.service';
+import { ChatsIAService } from '../../services/chats-ia.service';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 

@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="admin-chat-container">
+  <div class="admin-messages">
+    <div *ngFor="let msg of messages" class="admin-message">
+      <span class="admin-icon"><i class="fa-solid fa-user-shield"></i></span>
+      <strong>{{ msg.user }}:</strong> {{ msg.text }}
+    </div>
+  </div>
+  <form [formGroup]="chatForm" (ngSubmit)="sendMessage()" class="admin-chat-form">
+    <input
+      type="text"
+      formControlName="message"
+      placeholder="Escribe un mensaje..."
+      required
+    />
+    <button class="admin-send-button" type="submit">Enviar</button>
+  </form>
+</div>
+
+<div>
+  <app-footer></app-footer>
+</div>

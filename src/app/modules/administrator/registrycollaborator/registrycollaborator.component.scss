@@ -1,0 +1,160 @@
+
+.collaborator-registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.collaborator-form {
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.collaborator-form:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.collaborator-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.collaborator-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.collaborator-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.collaborator-subtitle {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+
+.collaborator-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+
+  input:hover {
+    border-color: #007bff;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  &.invalid input {
+    border-color: red;
+  }
+
+  small {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+  }
+}
+
+.collaborator-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.collaborator-button:hover {
+  background-color: #0056b3;
+}
+
+.collaborator-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Alerta de éxito */
+.alert {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .collaborator-form {
+    padding: 20px;
+  }
+
+  .collaborator-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .collaborator-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .collaborator-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collaborator-form {
+    padding: 15px;
+  }
+
+  .collaborator-title {
+    font-size: 20px;
+  }
+
+  .collaborator-subtitle {
+    font-size: 14px;
+  }
+
+  .collaborator-button {
+    font-size: 14px;
+  }
+}
