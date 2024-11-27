@@ -5,7 +5,10 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f4f4f4; /* Color de fondo */
+  background-image: url('https://imgs.search.brave.com/c4sZZHZmyY9c7vVf3MO9R_kVMrQFSSttaaznLXDqjj8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIw/NTc5MTIzNC9lcy9m/b3RvL3ZpZ2FzLWRl/LWZvY28tc29icmUt/dW4tZm9uZG8tYXp1/bC1yZWFsLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1EQmFz/OEJxMmt6RzZ1ZUMz/WUV2UkhMS1pWYWV5/MWxfbU1WSEF0WWp0/M05vPQ'); /* Cambia 'URL_DE_TU_IMAGEN' por la ruta de tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   padding: 20px;
 }
 
