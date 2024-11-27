@@ -1,7 +1,6 @@
-
-import { CommonModule } from '@angular/common';
-import { ChatsIAService } from '../../services/chats-ia.service';
 import { Component, inject } from '@angular/core';
+import { ChatsIAService } from '../../services/chats-ia.service';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -13,9 +12,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChatsIAComponent {
   prompt: string = '';
-  chatsIAService: ChatsIAService = inject(ChatsIAService);
   loading: boolean = false;
   chatHistory: any[] = [];
+  chatVisible: boolean = false;
+  bottom: number = 80;
+  right: number = 20;
+
+  chatsIAService: ChatsIAService = inject(ChatsIAService);
 
   constructor() {
     this.chatsIAService.getMessageHistory().subscribe((res: any[]) => {
@@ -32,5 +35,31 @@ export class ChatsIAComponent {
       this.prompt = '';
       this.loading = false;
     }
+  }
+
+  toggleChat() {
+    this.chatVisible = !this.chatVisible;
+  }
+
+  startDrag(event: MouseEvent) {
+    event.preventDefault();
+    const initialX = event.clientX;
+    const initialY = event.clientY;
+
+    const onMouseMove = (moveEvent: MouseEvent) => {
+      const deltaX = moveEvent.clientX - initialX;
+      const deltaY = moveEvent.clientY - initialY;
+
+      this.right -= deltaX;
+      this.bottom -= deltaY;
+    };
+
+    const onMouseUp = () => {
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    };
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
   }
 }

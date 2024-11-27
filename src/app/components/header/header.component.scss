@@ -2,47 +2,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 10px 20px;
   background-color: #efefef;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #fff;
 
-  // Contenedor para logo y título
   .logo-title {
-
     display: flex;
     align-items: center;
+
+    .logo {
+      width: 75px;
+      height: auto;
+      border-radius: 5%;
+    }
+
+    .title {
+      margin-left: 15px;
+      color: black;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
 
-  // Logo
-  .logo {
-    margin-left: 30px;
-    width: 45px;
-    height: auto;
-    margin-top: 2%;
-    border-radius: 5%;
-  }
-
-  // Título
-  .title {
-    margin-top: 8%;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 25px; // Ajusta el espacio entre el logo y el título
-  }
-
-  // Nav: Ajuste del contenedor y de los enlaces
   .nav {
-
     display: flex;
-    margin-top: 1%;
-    gap: 40px;
-    margin-right: 690px;// Reduce el espacio entre los enlaces y el título
-    font-family: sans-serif;
-    a {
+    align-items: left;
+    margin-right: 56%;
+    gap: 20px;
 
-      color: #000000;
+    a {
+      color: #000;
       text-decoration: none;
       font-size: 1.2rem;
 
@@ -50,48 +39,60 @@ header {
         color: #1364b0;
       }
     }
+
+    .btn-creat {
+      background-color: #1092f6;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 15px;
+      transition: transform 0.3s ease, background-color 0.3s;
+
+      &:hover {
+        background-color: #969a97;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
   }
 
-  // Botón Crear: estilo vibrante y llamativo
-  .btn-creat {
-   margin-top: -2%;
-    margin-right: 0%; // Reduce el espacio entre el botón y los enlaces de navegación
-    background-color: #1092f6;
-    color: #fff;
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    background: none;
     border: none;
-    padding: 8px 20px;
-    font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 15px;
-    transition: transform 0.3s ease, background-color 0.3s;
+    z-index: 10;
 
-    &:hover {
-      background-color: #969a97;
-      transform: scale(1.05);
-    }
-
-    &:active {
-      transform: scale(0.95);
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      transition: 0.3s;
     }
   }
 
-  // Botón Cerrar Sesión: estilo más discreto y formal
   .logout-button {
-    margin-right: 6%;
     background-color: #1064f6;
     color: #fff;
     border: none;
     padding: 6px 18px;
     font-size: 1rem;
-    font-weight: normal;
-    cursor: pointer;
     border-radius: 8px;
-    transition: color 0.3s ease, background-color 0.3s;
+    transition: background-color 0.3s ease;
 
     &:hover {
       background-color: #dc3545;
-      color: #fff;
     }
 
     &:active {
@@ -99,29 +100,47 @@ header {
     }
   }
 
-  // Responsivo para pantallas más pequeñas
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-
-    .title {
-      font-size: 1.5rem;
-      margin: 10px 0;
-    }
-
     .nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
       flex-direction: column;
-      gap: 10px;
+      align-items: flex-start;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
 
-      a {
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      a, .btn-creat {
+        margin: 10px 0;
         font-size: 1rem;
       }
     }
 
-    .btn-creat, .logout-button {
-      padding: 6px 10px;
-      font-size: 0.9rem;
-      margin: 5px 0;
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .logo-title {
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .logout-button {
+      margin-left: auto;
     }
   }
 }

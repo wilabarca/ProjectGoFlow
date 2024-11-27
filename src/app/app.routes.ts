@@ -11,6 +11,8 @@ import { AdministrativeAssignmentDeletionComponent } from './modules/administrat
 import { RegisteruserComponent } from './modules/registeruser/registeruser.component';
 import { ChatAdministratorComponent } from './modules/administrator/chatadministrator/chatadministrator.component';
 import { RegistrycollaboratorComponent } from './modules/administrator/registrycollaborator/registrycollaborator.component';
+import { ProgramminguserComponent } from './modules/programminguser/programminguser.component';
+import { EnglishuserComponent } from './modules/englishuser/englishuser.component';
 
 
 
@@ -27,5 +29,7 @@ export const routes: Routes = [
   {path: 'AdministrativeAssignmentDeletion', component:AdministrativeAssignmentDeletionComponent },
   {path: 'RegisterUser', component: RegisteruserComponent},
   {path: 'ChatAdministrator', component: ChatAdministratorComponent},
-  {path: 'Registrycollaborator', component: RegistrycollaboratorComponent}
+  {path: 'Registrycollaborator', component: RegistrycollaboratorComponent},
+  {path:'programminguser', component: ProgramminguserComponent},
+  {path: 'englishuser', component: EnglishuserComponent}
 ];

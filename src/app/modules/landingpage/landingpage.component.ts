@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';  // Asegúrate de importar Router
 import { ProfileComponent } from "../../components/profile/profile.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 
@@ -7,13 +8,13 @@ import { FooterComponent } from "../../components/footer/footer.component";
   standalone: true,
   imports: [ProfileComponent, FooterComponent],
   templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.scss'
+  styleUrls: ['./landingpage.component.scss']
 })
 export class LandingpageComponent {
   isMenuOpen = false;
   isMobile = false;
 
-  constructor() {
+  constructor(private router: Router) {
     this.updateMobileStatus();
   }
 
@@ -23,10 +24,17 @@ export class LandingpageComponent {
   }
 
   updateMobileStatus() {
-    this.isMobile = window.innerWidth < 768; // Cambia este valor según tus necesidades
+    this.isMobile = window.innerWidth < 768;
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  navigateToLogin(): void {
+    this.router.navigate(['/RegisterUser']);
+  }
+  navigateToRegisterUser() : void{
+    this.router.navigate(['/RegisterUser']);
   }
 }

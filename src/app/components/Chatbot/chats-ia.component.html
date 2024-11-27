@@ -1,20 +1,40 @@
-<div class="chat-container">
+<button
+  class="robot-icon"
+  [ngClass]="{'icon-hidden': chatVisible}"
+  (click)="toggleChat()"
+  (mousedown)="startDrag($event)">
+  <i class="fas fa-robot"></i>
+</button>
+
+<div *ngIf="chatVisible" class="chat-container" [ngStyle]="{'bottom': bottom + 'px', 'right': right + 'px'}">
   <div class="chat-header">
-    <h4>Chat Go Flow</h4>
+    <h4>Asistente IA</h4>
   </div>
-  <main class="chat-history">
-    <ng-container *ngFor="let item of chatHistory">
-      <div class="message-container">
-        <i class="fa" [ngClass]="{'fa-user-circle': item.from === 'user', 'fa-robot': item.from === 'bot'}"></i>
-        <span>{{ item.message }}</span>
+
+  <div class="chat-history">
+    <div *ngFor="let message of chatHistory">
+      <div [ngClass]="{ 'user-message': message.from === 'user', 'bot-message': message.from === 'bot' }">
+        <i *ngIf="message.from === 'user'" class="fas fa-user"></i>
+        <i *ngIf="message.from === 'bot'" class="fas fa-robot"></i>
+        {{ message.message }}
       </div>
-    </ng-container>
-    <div *ngIf="loading" class="loading-indicator">
-      <i class="fa fa-spinner fa-spin"></i> Generando respuesta...
     </div>
-  </main>
+
+    <div *ngIf="loading" class="loading-message">
+      <i class="fas fa-spinner fa-spin"></i> Generando respuesta...
+    </div>
+  </div>
+
   <div class="chat-input">
-    <input type="text" id="message-input" placeholder="Ingrese mensaje" [(ngModel)]="prompt" />
-    <button id="send-button" (click)="sendData()">Ingresar</button>
+    <input
+      type="text"
+      [(ngModel)]="prompt"
+      [disabled]="loading"
+      placeholder="Escribe tu mensaje..."
+      (keydown.enter)="sendData()"
+    />
+    <button (click)="sendData()" [disabled]="loading">
+      <i class="fas fa-paper-plane"></i> Enviar
+    </button>
   </div>
 </div>
