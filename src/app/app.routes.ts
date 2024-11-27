@@ -6,6 +6,7 @@ import { MathviewComponent } from './modules/mathview/mathview.component';
 import { LandingpageComponent} from './modules/landingpage/landingpage.component';
 import { SkillscollaboratorComponent } from './modules/skillscollaborator/skillscollaborator.component';
 import { ChatComponent } from './modules/chats/chats.component';
+import { TaskBoardComponent } from './modules/task-board/task-board.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
@@ -15,6 +16,7 @@ export const routes: Routes = [
   {path:'mathview', component:MathviewComponent},
   {path:'landingpage', component:LandingpageComponent},
   {path:'skillscollaborator', component:SkillscollaboratorComponent},
-  { path: 'chats', component: ChatComponent } // Asegúrate de que sea 'chats' en minúsculas
+  { path: 'chats', component: ChatComponent }, // Asegúrate de que sea 'chats' en minúsculas
+  {path: 'task-board', component: TaskBoardComponent},
 
 ];
