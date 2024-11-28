@@ -5,16 +5,29 @@
     <div class="columns">
       <div class="column">
         <h3>Por hacer</h3>
-        <button class="add-btn">Agregar +</button>
+        <button class="add-btn" (click)="openModal()">Agregar +</button>
       </div>
       <div class="column">
         <h3>En curso</h3>
-        <button class="add-btn">Agregar +</button>
+        <button class="add-btn" (click)="openModal()">Agregar +</button>
       </div>
       <div class="column">
         <h3>Hecho</h3>
-        <button class="add-btn">Agregar +</button>
+        <button class="add-btn" (click)="openModal()">Agregar +</button>
       </div>
     </div>
   </main>
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" *ngIf="isModalOpen">
+  <div class="modal">
+    <h2>Crear tarea</h2>
+    <label for="task-name">Nombre de la tarea</label>
+    <input id="task-name" type="text" [(ngModel)]="taskName" placeholder="Escribe el nombre de la tarea">
+    <div class="modal-actions">
+      <button (click)="addTask()">Guardar</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
 </div>
