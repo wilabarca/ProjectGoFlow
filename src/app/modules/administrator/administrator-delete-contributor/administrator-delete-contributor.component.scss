@@ -2,27 +2,27 @@
   .administrator-header {
     display: flex;
     align-items: center;
-    justify-content: center;  // Centra el contenido horizontalmente
-    background-color: #95a5a6;  // Gris claro
-    color: #ecf0f1;  // Texto claro
-    padding: 15px 20px;
+    justify-content: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
     height: 60px;
     position: fixed;
     width: 100%;
     z-index: 100;
     top: 0;
-    border-radius: 0; // Elimina el borde del header
+    border-radius: 0;
 
     .administrator-title {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 500;
+      gap: 15px;
+      font-weight: 600;
 
       i {
-        color: #879096;
-        font-size: 1.7rem;
+        color: #fff;
+        font-size: 2rem;
         transition: color 0.3s;
 
         &:hover {
@@ -41,30 +41,29 @@
       border-radius: 5px;
       font-weight: 600;
       transition: background-color 0.3s ease;
-      position: absolute;  // Para colocar el botón fuera del centro
-      right: 20px;  // Alineado a la derecha
+      position: absolute;
+      right: 90px;
 
       &:hover {
         background-color: #c0392b;
       }
 
       &:focus {
-        outline: none;  // Elimina el borde de enfoque
+        outline: none;
       }
     }
   }
 
-  // Diseño responsivo
   @media (max-width: 768px) {
     .administrator-header {
       flex-direction: column;
       padding: 15px 20px;
-      gap: 10px;
+      gap: 15px;
       align-items: center;
 
       .administrator-title {
         font-size: 1.4rem;
-        gap: 8px;
+        gap: 15px;
       }
 
       .logout-button {
@@ -80,11 +79,11 @@
   @media (max-width: 480px) {
     .administrator-header {
       padding: 12px;
-      height: auto;  // Asegura que no haya una altura fija
+      height: auto;
 
       .administrator-title {
         font-size: 1.5rem;
-        gap: 10px;
+        gap: 18px;
       }
 
       .logout-button {

@@ -3,11 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HeaderComponent } from '../../../components/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from "../../../components/footer/footer.component";
+import { CollaboratorHeaderComponent } from "../../../components/collaboratorheader/collaboratorheader.component";
 
 @Component({
   selector: 'app-skillscollaborator',
   standalone: true,
-  imports: [HeaderComponent, ReactiveFormsModule, FooterComponent],
+  imports: [HeaderComponent, ReactiveFormsModule, FooterComponent, CollaboratorHeaderComponent],
   templateUrl: './skillscollaborator.component.html',
   styleUrls: ['./skillscollaborator.component.scss'],
 })

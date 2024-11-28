@@ -17,9 +17,9 @@ export class ChatAdministratorComponent implements OnInit {
   messages: { user: string; text: string }[] = [];
 
   constructor(private fb: FormBuilder) {
-    // Inicializa el formulario con FormBuilder
+
     this.chatForm = this.fb.group({
-      message: ['', Validators.required], // Valida que el campo sea obligatorio
+      message: ['', Validators.required],
     });
   }
 
@@ -29,7 +29,7 @@ export class ChatAdministratorComponent implements OnInit {
     if (this.chatForm.valid) {
       const message = this.chatForm.value.message;
       this.messages.push({ user: this.adminName, text: message });
-      this.chatForm.reset(); // Limpia el formulario después de enviar
+      this.chatForm.reset(); 
     }
   }
 

@@ -1,15 +1,8 @@
 .user-registration {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* Hace que ocupe toda la altura de la ventana */
   padding: 20px;
-  background-image: url('https://imgs.search.brave.com/OvviuTL7G-xPdhaPMd4X6LOmhLiz642hj03bWsTqilE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTE5/ODUwNTg4L2VzL2Zv/dG8vZm9uZG8tc3Vh/dmUtZ3JhZGllbnRl/LWF6dWwuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPWFkZ1VB/TlFzQXg5RnUtZkFz/Q29mRUkzVFFHblNk/Qk5faUVTdTVraWpw/Tzg9'); /* Cambia 'URL_DE_TU_IMAGEN' por la URL o ruta de tu imagen */
-  background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
-
 
 .registration-form {
   width: 100%;
@@ -121,3 +114,23 @@
   border-radius: 4px;
   text-align: center;
 }
+.create-account-text {
+  color: #212122;
+  font-size: 15px;
+  font-family: sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.create-account-text:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.create-account-text:active {
+  color: #004085;
+}
+

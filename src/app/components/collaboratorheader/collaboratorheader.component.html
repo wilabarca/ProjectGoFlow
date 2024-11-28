@@ -1,0 +1,21 @@
+<header class="collaborator-header">
+  <div class="collaborator-logo-title">
+    <img src="logo.png" class="collaborator-logo" alt="Logo">
+    <h1 class="collaborator-title">Go Flow</h1>
+  </div>
+
+  <nav class="collaborator-nav" [class.active]="isMenuVisible">
+    <a href="/Homecollaborator">Inicio</a>
+    <a href="/skillscollaborator">Colaborar</a>
+  </nav>
+
+  <button class="collaborator-user-icon" (click)="toggleModal()">
+
+    <span class="material-icons">account_circle</span>
+  </button>
+
+  <div class="collaborator-user-modal" [class.active]="isModalVisible">
+    <button (click)="viewProfile()">Ver perfil</button>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
+</header>

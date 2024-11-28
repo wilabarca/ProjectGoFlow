@@ -5,17 +5,19 @@
   </div>
 
   <nav class="nav" [class.active]="isMenuVisible">
-    <a>Inicio</a>
-    <a>Colaboradores</a>
-    <button type="submit" class="btn-creat">Crear</button>
+    <a href="/userview">Inicio</a>
+    <a href="/administratorview">Colaboradores</a>
+    <button type="button" class="btn-creat" (click)="goToNewView()">Crear</button>
   </nav>
 
- 
-  <button type="button" class="hamburger-menu" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+
+  <button class="user-icon" (click)="toggleModal()">
+    <i class="fas fa-user-circle"></i>
   </button>
 
-  <button type="button" class="logout-button">Cerrar Sesión</button>
+
+  <div class="user-modal" [ngClass]="{'active': isModalVisible}">
+    <button (click)="viewProfile()">Ver perfil</button>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
 </header>

@@ -1,3 +1,75 @@
-body{
+body {
   background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.mis-chta {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  flex-direction: row; /* Título e ícono en la misma línea */
+  justify-content: space-between; /* Separa título e ícono */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  position: fixed; /* Fijado en la pantalla */
+  top: 360px;
+  height: 30px; /* Más abajo desde la parte superior */
+  left: 10px;
+  width: 300px; /* Ancho tipo tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de tarjeta */
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+
+  &:hover {
+    transform: scale(1.02); /* Efecto de agrandamiento al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Más sombra al pasar el mouse */
+  }
+
+  .title-mis {
+    margin-left: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .fas {
+      font-size: 1.8rem; /* Tamaño del ícono */
+      color: #007bff; /* Color del ícono */
+    }
+  }
+  .chat-footer{
+    position: absolute;
+    margin-top: 220px;
+  }
+
+  // Estilo responsivo
+  @media (max-width: 768px) {
+    width: 250px; /* Reduce el ancho en pantallas medianas */
+    padding: 15px;
+
+    .title-mis {
+      font-size: 1.2rem;
+
+      .fas {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 200px; /* Ancho reducido en pantallas pequeñas */
+    padding: 10px;
+
+    .title-mis {
+      font-size: 1rem;
+
+      .fas {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

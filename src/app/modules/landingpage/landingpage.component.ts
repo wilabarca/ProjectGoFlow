@@ -35,6 +35,6 @@ export class LandingpageComponent {
     this.router.navigate(['/RegisterUser']);
   }
   navigateToRegisterUser() : void{
-    this.router.navigate(['/RegisterUser']);
+    this.router.navigate(['/Registrycollaborator']);
   }
 }

@@ -5,16 +5,22 @@
 <div class="sidebar" [class.show]="isSidebarVisible">
   <ul class="sidebar-menu">
     <li>
-      <span>Eliminar Usuario</span>
-      <i class="fas fa-user-slash"></i>
+      <a href="/Deleteuser" class="sidebar-link">
+        <span>Eliminar Usuario</span>
+        <i class="fas fa-user-slash"></i>
+      </a>
     </li>
     <li>
-      <span>Eliminar Colaborador</span>
-      <i class="fas fa-user-friends"></i>
+      <a href="/AdministratorDeleteContributor" class="sidebar-link">
+        <span>Eliminar Colaborador</span>
+        <i class="fas fa-user-friends"></i>
+      </a>
     </li>
     <li>
-      <span>Eliminar Asignación</span>
-      <i class="fas fa-tasks"></i>
+      <a href="/AdministrativeAssignmentDeletion" class="sidebar-link">
+        <span>Eliminar Asignación</span>
+        <i class="fas fa-tasks"></i>
+      </a>
     </li>
   </ul>
 </div>

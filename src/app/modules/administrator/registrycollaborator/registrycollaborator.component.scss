@@ -1,14 +1,10 @@
-
 .collaborator-registration {
+  padding: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Hace que ocupe toda la altura de la ventana */
-  padding: 20px;
-  background-image: url('https://imgs.search.brave.com/6dRs4Lc1N_jjwOzMOKWDQunTnQcMcAHCRkgWt9ac6hA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU3/Njg2ODU5L2VzL2Zv/dG8vdGV4dHVyYS1k/ZS1mb25kby1hYnN0/cmFjdG8tYXp1bC1j/bGFyby1lZmVjdG8t/eHh4bC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9QzR5RXlx/NlJad1NjdktzUGlP/T3NUQ2c2V2VaVE9q/ZTVXYjZYSXhzVE5D/ND0'); /* Cambia 'URL_DE_TU_IMAGEN' por la URL o ruta de tu imagen */
-  background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh;
+  background-color: #f9f9f9;
 }
 
 .collaborator-form {
@@ -19,6 +15,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 20px;
 }
 
 .collaborator-form:hover {
@@ -35,8 +32,8 @@
 }
 
 .collaborator-logo {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 
 .collaborator-title {
@@ -52,44 +49,43 @@
   text-align: center;
 }
 
-
 .collaborator-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+}
 
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333;
-  }
+.collaborator-field label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
 
-  input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
-  }
+.collaborator-field input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
 
-  input:hover {
-    border-color: #007bff;
-  }
+.collaborator-field input:hover {
+  border-color: #007bff;
+}
 
-  input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
+.collaborator-field input:focus {
+  border-color: #007bff;
+  outline: none;
+}
 
-  &.invalid input {
-    border-color: red;
-  }
+.collaborator-field.invalid input {
+  border-color: red;
+}
 
-  small {
-    font-size: 12px;
-    color: red;
-    margin-top: 5px;
-  }
+.collaborator-field small {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
 }
 
 .collaborator-button {
@@ -113,7 +109,6 @@
   cursor: not-allowed;
 }
 
-/* Alerta de éxito */
 .alert {
   padding: 10px;
   margin-top: 15px;

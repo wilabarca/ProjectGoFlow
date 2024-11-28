@@ -1,6 +1,6 @@
 .robot-icon {
   position: fixed;
-  bottom: 20px;
+  bottom: 200px;
   right: 20px;
   background-color: #333;
   color: white;
@@ -8,7 +8,7 @@
   padding: 1rem;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  z-index: 20;
   transition: 0.3s all ease;
 
   i {
@@ -21,7 +21,7 @@
 
   @media (max-width: 767px) {
     right: 10px;
-    bottom: 10px;
+    bottom: 80px;
     padding: 0.75rem;
 
     i {
@@ -32,8 +32,7 @@
   @media (max-width: 480px) {
     padding: 0.5rem;
     right: 10px;
-    bottom: 10px;
-
+    bottom: 60px;
     i {
       font-size: 1.2rem;
     }
@@ -42,7 +41,7 @@
 
 .chat-container {
   position: fixed;
-  bottom: 80px;
+  bottom: 180px;
   right: 20px;
   width: 100%;
   max-width: 360px;
@@ -53,7 +52,7 @@
   font-family: Arial, sans-serif;
   display: block;
   transition: opacity 0.3s ease-in-out;
-  z-index: 20;
+  z-index: 10; 
 
   @media (max-width: 767px) {
     max-width: 100%;

@@ -1,69 +1,70 @@
 .footer {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en una columna */
-  align-items: center; /* Centrar el contenido horizontalmente */
-  justify-content: center; /* Centrar el contenido verticalmente */
-  padding: 20px; /* Espacio interno */
-  background-color: #ebebeb; /* Color de fondo */
-  border-top: 1px solid #e9ecef; /* Línea superior para separación */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ebebeb;
+  margin-top: auto;
+  flex-shrink: 0;
+  border-top: 1px solid #e9ecef;
 }
 
 .foo-1 {
-  margin-bottom: 10px; /* Espacio debajo del texto */
-  font-size: 0.9em; /* Tamaño de fuente más pequeño */
-  color: #666; /* Color del texto */
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #666;
 }
 
 .footer-nav {
-  margin-bottom: 10px; /* Espacio debajo de la navegación */
-  display: flex; /* Usar Flexbox para los enlaces */
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-  justify-content: center; /* Centrar los enlaces */
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-nav a {
-  margin: 0 10px; /* Espaciado entre enlaces */
-  color: #007bff; /* Color del texto */
-  text-decoration: none; /* Quitar subrayado */
-  font-size: 0.9em; /* Tamaño de fuente más pequeño */
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
 .footer-nav a:hover {
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+  text-decoration: underline;
 }
 
 .social-icons {
-  display: flex; /* Usar Flexbox para alinear íconos */
-  gap: 15px; /* Espaciado entre íconos */
-  margin-top: 10px; /* Espacio arriba de los íconos */
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .social-icons a {
-  color: #333; /* Color de los íconos */
-  font-size: 24px; /* Tamaño de los íconos */
-  transition: color 0.3s; /* Transición suave para el color */
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #007bff; /* Color al pasar el mouse */
+  color: #007bff;
 }
 
-/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .footer {
-    padding: 15px; /* Reducir el padding en móviles */
+    padding: 15px;
   }
 
   .foo-1 {
-    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+    font-size: 0.8em;
   }
 
   .footer-nav a {
-    margin: 0 5px; /* Reducir espaciado entre enlaces */
-    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+    margin: 0 5px;
+    font-size: 0.8em;
   }
 
   .social-icons a {
-    font-size: 20px; /* Tamaño de íconos más pequeño en móviles */
+    font-size: 20px;
   }
 }

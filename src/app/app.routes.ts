@@ -13,6 +13,13 @@ import { ChatAdministratorComponent } from './modules/administrator/chatadminist
 import { RegistrycollaboratorComponent } from './modules/administrator/registrycollaborator/registrycollaborator.component';
 import { ProgramminguserComponent } from './modules/programminguser/programminguser.component';
 import { EnglishuserComponent } from './modules/englishuser/englishuser.component';
+import { TaksboardComponent } from './modules/taksboard/taksboard.component';
+import { UserProfileComponent } from './modules/userprofile/userprofile.component';
+import { HomecollaboratorComponent } from './modules/administrator/homecollaborator/homecollaborator.component';
+import { MathviewadministratorComponent } from './modules/administrator/mathviewadministrator/mathviewadministrator.component';
+import { EnglishadministratorComponent } from './modules/administrator/englishadministrator/englishadministrator.component';
+import { ProgrammingadministratorComponent } from './modules/administrator/programmingadministrator/programmingadministrator.component';
+import { DeleteuserComponent } from './modules/administrator/deleteuser/deleteuser.component';
 
 
 
@@ -28,8 +35,15 @@ export const routes: Routes = [
   { path: 'AdministratorDeleteContributor',  component: AdministratorDeleteContributorComponent},
   {path: 'AdministrativeAssignmentDeletion', component:AdministrativeAssignmentDeletionComponent },
   {path: 'RegisterUser', component: RegisteruserComponent},
-  {path: 'ChatAdministrator', component: ChatAdministratorComponent},
+  {path: 'Chatcollaborator', component: ChatAdministratorComponent},
   {path: 'Registrycollaborator', component: RegistrycollaboratorComponent},
   {path:'programminguser', component: ProgramminguserComponent},
-  {path: 'englishuser', component: EnglishuserComponent}
+  {path: 'englishuser', component: EnglishuserComponent},
+  {path: 'Taksboard', component: TaksboardComponent},
+  {path: 'userprofile', component: UserProfileComponent},
+  {path:'Homecollaborator', component: HomecollaboratorComponent},
+  {path: 'Mathviewadministrator',  component:MathviewadministratorComponent},
+  {path:'Englishadministrator', component:EnglishadministratorComponent},
+  {path: 'Programmingadministrator', component: ProgrammingadministratorComponent},
+  {path:'Deleteuser', component: DeleteuserComponent},
 ];

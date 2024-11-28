@@ -1,45 +1,35 @@
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-image: url('https://imgs.search.brave.com/c4sZZHZmyY9c7vVf3MO9R_kVMrQFSSttaaznLXDqjj8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIw/NTc5MTIzNC9lcy9m/b3RvL3ZpZ2FzLWRl/LWZvY28tc29icmUt/dW4tZm9uZG8tYXp1/bC1yZWFsLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1EQmFz/OEJxMmt6RzZ1ZUMz/WUV2UkhMS1pWYWV5/MWxfbU1WSEF0WWp0/M05vPQ'); /* Cambia 'URL_DE_TU_IMAGEN' por la ruta de tu imagen */
-  background-size: cover; /* La imagen cubre todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  padding: 20px;
+.username-form-gropu{
+  padding: 80px;
 }
 
 form {
   background-color: white;
-  padding: 30px; /* Mayor espaciado para mejorar la apariencia */
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 320px; /* Ancho máximo más estrecho */
-  margin: auto; /* Centrar el formulario */
-  transition: all 0.3s ease; /* Transición suave */
+  max-width: 320px;
+  margin: auto;
+  transition: all 0.3s ease;
 }
 
 .title-10 {
-  font-size: 145%; /* Tamaño de fuente ajustado */
-  text-align: center; /* Centrar el título */
-  margin: 10px 0; /* Margen superior e inferior */
+  font-size: 145%;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .logo {
   position: absolute;
-  margin-top: 1%;
+  margin-top: 0%;
   left: 42%;
-  max-width: 88px; /* Asegúrate de que el logo no sea demasiado grande */
-  margin-bottom: 20px; /* Espaciado debajo del logo */
-  transition: transform 0.3s; /* Transición para el logo */
+  max-width: 88px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
 }
 
 .logo:hover {
-  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+  transform: scale(1.05);
 }
 
 .title {
@@ -47,37 +37,37 @@ form {
   margin-left: 9%;
   font-size: 30px;
   font-size: bold;
-  margin-bottom: 10px; /* Espaciado debajo del título */
-  color: #333; /* Color del título */
-  text-align: center; /* Centrando el título */
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
 }
 
 .form-group {
-  margin-bottom: 20px; /* Mayor espaciado entre grupos de formularios */
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Coloca las etiquetas y los inputs en columna */
-  align-items: center; /* Centrar elementos dentro del grupo */
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold; /* Fuente más negrita */
-  color: #555; /* Color de la etiqueta */
-  text-align: center; /* Centrar etiqueta */
+  font-weight: bold;
+  color: #555;
+  text-align: center;
 }
 
 input {
-  width: 90%; /* Ancho del input ajustado */
+  width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px; /* Esquinas redondeadas */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Transición en el borde y sombra */
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 
   &:focus {
-    border-color: #007bff; /* Color del borde en foco */
-    outline: none; /* Quita el contorno predeterminado */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   }
 }
 
@@ -89,57 +79,56 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff; /* Color del botón */
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px; /* Esquinas redondeadas */
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* Tamaño de fuente del botón */
-  transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
-    background-color: #0056b3; /* Color del botón en hover */
-    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+    background-color: #0056b3;
+    transform: translateY(-2px);
   }
 
   &:disabled {
-    background-color: #ccc; /* Color del botón deshabilitado */
-    cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
+    background-color: #ccc;
+    cursor: not-allowed;
   }
 }
 
 .tap {
   text-align: center;
-  display: block; /* Hacer el enlace un bloque */
-  margin-top: 15px; /* Espaciado superior */
-  color: #007bff; /* Color del enlace */
-  text-decoration: none; /* Sin subrayado */
-  transition: color 0.3s; /* Transición suave */
+  display: block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
 
   &:hover {
-    color: #0056b3; /* Color del enlace en hover */
-    text-decoration: underline; /* Subrayar en hover */
+    color: #0056b3;
+    text-decoration: underline;
   }
 }
 
 .pa-1 {
-  text-align: center; /* Centrar el texto */
-  margin-top: 10px; /* Espaciado superior */
-  color: #777; /* Color más claro para el texto */
+  text-align: center;
+  margin-top: 10px;
+  color: #777;
 }
 
-/* Estilos Responsivos */
 @media (max-width: 600px) {
   form {
-    padding: 15px; /* Menos espaciado en pantallas pequeñas */
-    width: 90%; /* Ancho máximo más estrecho */
+    padding: 15px;
+    width: 90%;
   }
 
   .title {
-    font-size: 20px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    font-size: 20px;
   }
 
   button {
-    font-size: 14px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    font-size: 14px;
   }
 }

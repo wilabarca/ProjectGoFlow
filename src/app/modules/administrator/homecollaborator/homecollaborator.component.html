@@ -1,0 +1,37 @@
+<app-collaboratorheader></app-collaboratorheader>
+<div class="section-container">
+  <!-- Tarjeta de Programación -->
+  <div class="section-card programming-section" routerLink="/Programmingadministrator">
+    <h2 class="section-title">
+      Programación <i class="fas fa-code"></i>
+    </h2>
+  </div>
+  <app-profilecontributor
+    [name]="'Ana López'"
+    [expertise]="'Programación'"
+    [information]="'Especialista en JavaScript, Angular y React con 5 años de experiencia.'"
+    (quote)="handleQuote()">
+  </app-profilecontributor>
+
+  <!-- Tarjeta de Matemáticas -->
+  <div class="section-card math-section" routerLink="/math">
+    <h2 class="section-title">
+      Matemáticas Puras <i class="fas fa-square-root-alt"></i>
+    </h2>
+  </div>
+
+  <!-- Tarjeta de Inglés -->
+  <div class="section-card language-section" routerLink="/language">
+    <h2 class="section-title">
+      Inglés <i class="fas fa-globe"></i>
+    </h2>
+  </div>
+</div>
+
+
+<div>
+  <app-chats-ia></app-chats-ia>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

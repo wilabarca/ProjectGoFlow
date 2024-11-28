@@ -4,6 +4,23 @@
 
 <div class="programming">
   <h2 class="programming-title">
-     Programación <i class="fas fa-laptop-code programming-icon"></i>
+    Programación <i class="fas fa-laptop-code programming-icon"></i>
   </h2>
+</div>
+
+<div class="profile-contributors-container">
+
+
+  <app-profilecontributor
+    [name]="'Ana López'"
+    [expertise]="'Programación'"
+    [information]="'Especialista en JavaScript, Angular y React con 5 años de experiencia.'"
+    (quote)="handleQuote()">
+  </app-profilecontributor>
+
+  
+</div>
+
+<div>
+  <app-footer></app-footer>
 </div>

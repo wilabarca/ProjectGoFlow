@@ -1,0 +1,123 @@
+.board {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3f2fd;
+  padding: 10px 20px;
+}
+
+.board-header .logo h1 {
+  margin: 0;
+}
+
+.board-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.board-header nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.board-header .btn-create {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.board-header .btn-create:hover {
+  background-color: #0056b3;
+}
+
+.board-header .user-profile span {
+  font-size: 24px;
+}
+
+.board-main {
+  text-align: center;
+}
+
+.board-main h2 {
+  margin: 20px 0;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.column h3 {
+  margin-bottom: 20px;
+}
+
+.column .add-btn {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.column .add-btn:hover {
+  background-color: #eee;
+}
+
+@media (max-width: 1024px) {
+  .column {
+      width: 45%;
+  }
+
+  .board-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+      width: 100%;
+  }
+
+  .board-header nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .board-header {
+      padding: 10px;
+  }
+
+  .column {
+      padding: 15px;
+  }
+
+  .column h3 {
+      font-size: 18px;
+  }
+
+  .add-btn {
+      padding: 8px 16px;
+  }
+}
