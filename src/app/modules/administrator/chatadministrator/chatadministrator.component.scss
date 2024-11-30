@@ -52,11 +52,30 @@
   background-color: #eef6ff;
   color: #333;
   word-wrap: break-word;
+  max-width: 100%;
 
   .admin-icon {
     font-size: 1.2rem;
     color: #007bff;
     margin-right: 8px;
+  }
+
+  &.admin-message-user {
+    background-color: #d1ffd6; /* Fondo diferente para los mensajes de los usuarios */
+    color: #333;
+
+    .admin-icon {
+      color: #28a745; /* Cambiar color del ícono para los usuarios */
+    }
+  }
+
+  &.admin-message-admin {
+    background-color: #d0f0ff; /* Fondo diferente para los mensajes del administrador */
+    color: #333;
+
+    .admin-icon {
+      color: #007bff; /* Color del ícono para el administrador */
+    }
   }
 
   @media (max-width: 768px) {

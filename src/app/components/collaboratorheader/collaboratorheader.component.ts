@@ -19,7 +19,7 @@ export class CollaboratorHeaderComponent {
   }
 
   viewProfile(): void {
-    this.router.navigate(['/userprofile']);
+    this.router.navigate(['/Profilecontributer']);
     this.toggleModal();
   }
 

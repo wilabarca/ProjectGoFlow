@@ -15,7 +15,7 @@ export class ProfilecontributorComponent {
   constructor(private router: Router) { }
 
   onQuote(): void {
-    this.router.navigate(['/Chatcollaborator']); 
+    this.router.navigate(['/chatuser']);
   }
 
 }

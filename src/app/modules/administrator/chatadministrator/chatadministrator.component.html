@@ -1,11 +1,29 @@
-<app-header></app-header>
+
 <div class="admin-chat-container">
+  <!-- Contenedor de mensajes -->
   <div class="admin-messages">
-    <div *ngFor="let msg of messages" class="admin-message">
-      <span class="admin-icon"><i class="fa-solid fa-user-shield"></i></span>
-      <strong>{{ msg.user }}:</strong> {{ msg.text }}
+    <div
+      *ngFor="let msg of messages"
+      class="admin-message"
+      [ngClass]="{'admin-message-user': msg.user !== adminName, 'admin-message-admin': msg.user === adminName}">
+
+      <!-- Icono dinámico según el usuario -->
+      <span class="admin-icon">
+        <i
+          class="fa-solid"
+          [ngClass]="{'fa-user-shield': msg.user === adminName, 'fa-user': msg.user !== adminName}"></i>
+      </span>
+
+      <!-- Texto del mensaje -->
+      <div class="message-content">
+        <strong>{{ msg.user }}:</strong>
+        <span class="message-text">{{ msg.text }}</span>
+        <span class="message-time">{{ msg.timestamp }}</span>
+      </div>
     </div>
   </div>
+
+  <!-- Formulario de envío -->
   <form [formGroup]="chatForm" (ngSubmit)="sendMessage()" class="admin-chat-form">
     <input
       type="text"
@@ -17,6 +35,4 @@
   </form>
 </div>
 
-<div>
-  <app-footer></app-footer>
-</div>
+<app-footer></app-footer>

@@ -20,6 +20,7 @@ import { MathviewadministratorComponent } from './modules/administrator/mathview
 import { EnglishadministratorComponent } from './modules/administrator/englishadministrator/englishadministrator.component';
 import { ProgrammingadministratorComponent } from './modules/administrator/programmingadministrator/programmingadministrator.component';
 import { DeleteuserComponent } from './modules/administrator/deleteuser/deleteuser.component';
+import { ProfilecontributerComponent } from './modules/administrator/profilecontributer/profilecontributer.component';
 
 
 
@@ -46,4 +47,5 @@ export const routes: Routes = [
   {path:'Englishadministrator', component:EnglishadministratorComponent},
   {path: 'Programmingadministrator', component: ProgrammingadministratorComponent},
   {path:'Deleteuser', component: DeleteuserComponent},
+  {path:'Profilecontributer',  component: ProfilecontributerComponent}
 ];
