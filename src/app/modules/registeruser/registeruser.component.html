@@ -1,7 +1,7 @@
 <div class="user-registration">
   <form [formGroup]="registerForm" (ngSubmit)="submitForm()" class="registration-form">
     <div class="registration-header">
-      <img class="registration-logo" src="logo.png" alt="Logo">
+      <img class="registration-logo" src="logo.png" alt="Logo" />
       <h3 class="registration-title">GoFlow</h3>
     </div>
     <h5 class="registration-subtitle">Crear Usuario</h5>
@@ -60,7 +60,6 @@
       <small *ngIf="formControls['password'].invalid && formControls['password'].touched">
         La contraseña debe tener al menos 6 caracteres.
       </small>
-
     </div>
 
     <div class="registration-field">
@@ -85,5 +84,5 @@
     <div *ngIf="userAdded" class="alert alert-success">
       Usuario agregado exitosamente.
     </div>
-  </form>
+  </form>
 </div>

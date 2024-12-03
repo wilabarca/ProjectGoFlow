@@ -1,4 +1,4 @@
-<div class="username-form-gropu">
+<div class="username-form-group">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <img src="logo.png" class="logo" alt="Logo">
     <h1 class="title">GoFlow</h1>
@@ -22,6 +22,6 @@
 
     <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
     <a class="tap" href="RegisterUser">Crear Cuenta</a>
-    <p class="pa-1">Organiza tu dia, alcanza tu meta</p>
+    <p class="pa-1">Organiza tu día, alcanza tu meta</p>
   </form>
 </div>
