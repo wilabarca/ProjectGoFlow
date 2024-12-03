@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-registrycollaborator',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './registrycollaborator.component.html',
   styleUrls: ['./registrycollaborator.component.scss'],
 })
@@ -30,7 +30,7 @@ export class RegistrycollaboratorComponent {
 
   submitForm() {
     if (this.collaboratorForm.valid) {
-      
+
       console.log(this.collaboratorForm.value);
       this.showSuccessMessage = true;
     }

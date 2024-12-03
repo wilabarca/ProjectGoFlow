@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-registeruser',
   standalone:true,
-  imports:[ReactiveFormsModule],
+  imports:[ReactiveFormsModule, CommonModule ],
   templateUrl: './registeruser.component.html',
   styleUrls: ['./registeruser.component.scss']
 })
 export class RegisteruserComponent {
   registerForm: FormGroup;
   showSuccessMessage: boolean = false;
+userAdded: any;
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -28,7 +29,7 @@ export class RegisteruserComponent {
 
   submitForm() {
     if (this.registerForm.valid) {
- 
+
       console.log('Usuario agregado:', this.registerForm.value);
       this.showSuccessMessage = true;
 
